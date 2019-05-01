@@ -1,0 +1,171 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Invest In Players
+{% endblock %}
+
+{% block content %}
+
+    {% if player.id_in_group == 1 %}
+    You have {{player.endowment}} as starting money. <br>
+    Remainder after investment is kept with no growth (multiplied by one) <br><br><br>
+
+
+        {% for network in p1networks %}
+
+            {% if network == 1 %}
+
+                Player 1 promised {{promise1}}% of your investment after growth back <br>
+                Player 1 has a multiplier of {{player1cp}} <br>
+                How much do you want to invest? <br><br>
+                {% formfield player.investments[1] label='Invest'%}
+
+            {% elif network == 2 %}
+
+                Player 2 promised {{promise2}}% of your investment after growth back <br>
+                Player 2 has a multiplier of {{player2cp}} <br>
+                How much do you want to invest? <br><br>
+                {% formfield player.investments[2] label='Invest'%}
+
+            {% elif network == 3 %}
+
+                Player 3 promised {{promise3}}% of your investment after growth back <br>
+                Player 3 has a multiplier of {{player3cp}} <br>
+                How much do you want to invest? <br><br>
+                {% formfield player.investments[3] label='Invest'%}
+
+
+            {% elif network == 4 %}
+
+                Player 4 promised {{promise4}}% of your investment after growth back <br>
+                Player 4 has a multiplier of {{player4cp}} <br>
+                How much do you want to invest? <br><br>
+                {% formfield player.investments[4] label='Invest'%}
+
+            {% endif %}
+
+        {% endfor %}
+
+
+    {% elif player.id_in_group == 2 %}
+    You have {{player.endowment}} as starting money. <br>
+    Remainder after investment is kept with no growth (multiplied by one) <br><br><br>
+         {% for network in p2networks %}
+
+            {% if network == 1 %}
+
+                Player 1 promised {{promise1}}% of your investment after growth back <br>
+                Player 1 has a multiplier of {{player1cp}} <br>
+                How much do you want to invest? <br><br>
+                {% formfield player.investments[1] label='Invest'%}
+
+            {% elif network == 2 %}
+
+                Player 2 promised {{promise2}}% of your investment after growth back <br>
+                Player 2 has a multiplier of {{player2cp}} <br>
+                How much do you want to invest? <br><br>
+                {% formfield player.investments[2] label='Invest'%}
+
+            {% elif network == 3 %}
+
+                Player 3 promised {{promise3}}% of your investment after growth back <br>
+                Player 3 has a multiplier of {{player3cp}} <br>
+                How much do you want to invest? <br><br>
+                {% formfield player.investments[3] label='Invest'%}
+
+
+            {% elif network == 4 %}
+
+                Player 4 promised {{promise4}}% of your investment after growth back <br>
+                Player 4 has a multiplier of {{player4cp}} <br>
+                How much do you want to invest? <br><br>
+                {% formfield player.investments[4] label='Invest'%}
+
+            {% endif %}
+
+        {% endfor %}
+
+    {% elif player.id_in_group == 3 %}
+    You have {{player.endowment}} as starting money. <br>
+    Remainder after investment is kept with no growth (multiplied by one) <br><br><br>
+         {% for network in p3networks %}
+
+            {% if network == 1 %}
+
+                Player 1 promised {{promise1}}% of your investment after growth back <br>
+                Player 1 has a multiplier of {{player1cp}} <br>
+                How much do you want to invest? <br><br>
+                {% formfield player.investments[1] label='Invest'%}
+
+            {% elif network == 2 %}
+
+                Player 2 promised {{promise2}}% of your investment after growth back <br>
+                Player 2 has a multiplier of {{player2cp}} <br>
+                How much do you want to invest? <br><br>
+                {% formfield player.investments[2] label='Invest'%}
+
+            {% elif network == 3 %}
+
+                Player 3 promised {{promise3}}% of your investment after growth back <br>
+                Player 3 has a multiplier of {{player3cp}} <br>
+                How much do you want to invest? <br><br>
+                {% formfield player.investments[3] label='Invest'%}
+
+
+            {% elif network == 4 %}
+
+                Player 4 promised {{promise4}}% of your investment after growth back <br>
+                Player 4 has a multiplier of {{player4cp}} <br>
+                How much do you want to invest? <br><br>
+                {% formfield player.investments[4] label='Invest'%}
+            {% endif %}
+        {% endfor %}
+
+    {% elif player.id_in_group == 4 %}
+    You have {{player.endowment}} as starting money. <br>
+    Remainder after investment is kept with no growth (multiplied by one) <br><br><br>
+          {% for network in p4networks %}
+
+            {% if network == 1 %}
+
+                Player 1 promised {{promise1}}% of your investment after growth back <br>
+                Player 1 has a multiplier of {{player1cp}} <br>
+                How much do you want to invest? <br><br>
+                {% formfield player.investments[1] label='Invest'%}
+
+            {% elif network == 2 %}
+
+                Player 2 promised {{promise2}}% of your investment after growth back <br>
+                Player 2 has a multiplier of {{player2cp}} <br>
+                How much do you want to invest? <br><br>
+                {% formfield player.investments[2] label='Invest'%}
+
+            {% elif network == 3 %}
+
+                Player 3 promised {{promise3}}% of your investment after growth back <br>
+                Player 3 has a multiplier of {{player3cp}} <br>
+                How much do you want to invest? <br><br>
+                {% formfield player.investments[3] label='Invest'%}
+
+
+            {% elif network == 4 %}
+
+                Player 4 promised {{promise4}}% of your investment after growth back <br>
+                Player 4 has a multiplier of {{player4cp}} <br>
+                How much do you want to invest? <br><br>
+                {% formfield player.investments[4] label='Invest'%}
+
+            {% endif %}
+        {% endfor %}
+
+
+
+    {% else %}
+        you should never see this
+    {% endif %}
+
+    {% next_button %}
+{% endblock %}
+
+

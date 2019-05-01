@@ -1,0 +1,46 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block content %}
+
+    {% if player.id_in_group == 1 %}
+        You sent Player 2 {{player.investment2}} <br>
+
+        They promised {{promise2}} % back <br>
+
+        They gave back {{player2_return1}} <br><br>
+
+        You sent Player 3 {{player.investment3}} <br>
+
+        They promised {{promise3}} % back <br>
+
+        They gave back {{player3_return1}} <br>
+
+    {% if player.id_in_group == 2 %}
+        You sent Player 1 {{player.investment1}} <br>
+
+        They promised {{promise1}} % back <br>
+
+        They gave back {{player1_return2}} <br><br>
+
+        You sent Player 3 {{player.investment3}} <br>
+
+        They promised {{promise3}} % back <br>
+
+        They gave back {{player3_return2}} <br>
+
+    {% if player.id_in_group == 3 %}
+        You sent Player 1 {{player.investment1}} <br>
+
+        They promised {{promise1}} % back <br>
+
+        They gave back {{player1_return3}} <br><br>
+
+        You sent Player 2 {{player.investment2}} <br>
+
+        They promised {{promise2}} % back <br>
+
+        They gave back {{player2_return3}} <br>
+
+
+{% endblock %}

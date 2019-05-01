@@ -1,0 +1,205 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Return Investments
+{% endblock %}
+
+{% block content %}
+
+    {% if player.id_in_group == 1 %}
+
+        You kept {{player1_investment1}}<br>
+        After outside investment you have {{player.investment_in_me_ag}} in total<br>
+        You promised to return {{player.promise}}% back on each investment<br><br>
+
+        {% for network in p1networks %}
+
+            {% if network == 1 %}
+
+                Player 1 invested {{player1_investment1}}<br>
+                After growth it was {{player1_investment1ag}}<br>
+                What percent of after growth investment do you want to return? <br>
+
+                {% formfield player.return1 label='Return' %} <br>
+
+            {% elif network == 2 %}
+
+                Player 2 invested {{player2_investment1}}<br>
+                After growth it was {{player2_investment1ag}}<br>
+                What percent of after growth investment do you want to return? <br>
+
+                {% formfield player.return2 label='Return'%} <br>
+
+            {% elif network == 3 %}
+
+
+                Player 3 invested {{player3_investment1}}<br>
+                After growth it was {{player3_investment1ag}}<br>
+                What percent of after growth investment do you want to return? <br>
+
+                {% formfield player.return3 label='Return'%} <br>
+
+
+            {% elif network == 4 %}
+
+                Player 4 invested {{player4_investment1}}<br>
+                After growth it was {{player4_investment1ag}}<br>
+                What percent of after growth investment do you want to return? <br>
+
+                {% formfield player.return4 label='Return'%} <br>
+
+            {% endif %}
+
+        {% endfor %}
+
+    {% elif player.id_in_group == 2 %}
+
+        You kept {{player2_investment2}}<br>
+        After outside investment you have {{player.investment_in_me_ag}} in total<br>
+        You promised to return {{player.promise}}% back on each investment<br><br>
+
+        {% for network in p2networks %}
+
+
+            {% if network == 1 %}
+
+                Player 1 invested {{player1_investment2}}<br>
+                After growth it was {{player1_investment2ag}}<br>
+                What percent of after growth investment do you want to return? <br>
+
+                {% formfield player.return1 label='Return'%} <br>
+
+            {% elif network == 2 %}
+
+                Player 2 invested {{player2_investment2}}<br>
+                After growth it was {{player2_investment2ag}}<br>
+                What percent of after growth investment do you want to return? <br>
+
+                {% formfield player.return2 label='Return'%} <br>
+
+            {% elif network == 3 %}
+
+
+                Player 3 invested {{player3_investment2}}<br>
+                After growth it was {{player3_investment2ag}}<br>
+                What percent of after growth investment do you want to return? <br>
+
+                {% formfield player.return3 label='Return'%} <br>
+
+
+            {% elif network == 4 %}
+
+                Player 4 invested {{player4_investment2}}<br>
+                After growth it was {{player4_investment2ag}}<br>
+                What percent of after growth investment do you want to return? <br>
+
+                {% formfield player.return4 label='Return' %} <br>
+
+            {% endif %}
+
+        {% endfor %}
+
+
+    {% elif player.id_in_group == 3 %}
+
+        You kept {{player3_investment3}}<br>
+        After outside investment you have {{player.investment_in_me_ag}} in total<br>
+        You promised to return {{player.promise}}% back on each investment<br><br>
+
+        {% for network in p3networks %}
+
+            {% if network == 1 %}
+
+                Player 1 invested {{player1_investment3}}<br>
+                After growth it was {{player1_investment3ag}}<br>
+                What percent of after growth investment do you want to return? <br>How much do you want to return? <br>
+
+                {% formfield player.return1 label='Return'%} <br>
+
+            {% elif network == 2 %}
+
+                Player 2 invested {{player2_investment3}}<br>
+                After growth it was {{player2_investment3ag}}<br>
+                What percent of after growth investment do you want to return? <br>
+
+                {% formfield player.return2 label='Return'%} <br>
+
+            {% elif network == 3 %}
+
+
+                Player 3 invested {{player3_investment3}}<br>
+                After growth it was {{player3_investment3ag}}<br>
+                What percent of after growth investment do you want to return? <br>
+
+                {% formfield player.return3 label='Return'%} <br>
+
+
+            {% elif network == 4 %}
+
+                Player 4 invested {{player4_investment3}}<br>
+                After growth it was {{player4_investment3ag}}<br>
+                What percent of after growth investment do you want to return? <br>
+
+                {% formfield player.return4 label='Return'%} <br>
+
+            {% endif %}
+
+        {% endfor %}
+
+    {% elif player.id_in_group == 4 %}
+
+        You kept {{player4_investment4}}<br>
+        After outside investment you have {{player.investment_in_me_ag}} in total<br>
+        You promised to return {{player.promise}}% back on each investment<br><br>
+
+        {% for network in p4networks %}
+
+            {% if network == 1 %}
+
+                Player 1 invested {{player1_investment4}}<br>
+                After growth it was {{player1_investment4ag}}<br>
+                What percent of after growth investment do you want to return? <br>
+
+                {% formfield player.return1 label='Return'%} <br>
+
+            {% elif network == 2 %}
+
+                Player 2 invested {{player2_investment4}}<br>
+                After growth it was {{player2_investment4ag}}<br>
+                What percent of after growth investment do you want to return? <br>
+
+                {% formfield player.return2 label='Return'%} <br>
+
+            {% elif network == 3 %}
+
+
+                Player 3 invested {{player3_investment4}}<br>
+                After growth it was {{player3_investment4ag}}<br>
+                What percent of after growth investment do you want to return? <br>
+
+                {% formfield player.return3 label='Return'%} <br>
+
+
+            {% elif network == 4 %}
+
+                Player 4 invested {{player4_investment4}}<br>
+                After growth it was {{player4_investment4ag}}<br>
+                What percent of after growth investment do you want to return? <br>
+
+                {% formfield player.return4 label='Return'%} <br>
+
+            {% endif %}
+
+        {% endfor %}
+
+
+
+    {% else %}
+        you should never see this
+    {% endif %}
+
+    {% next_button %}
+{% endblock %}
+
+

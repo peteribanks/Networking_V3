@@ -1,0 +1,230 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block content %}
+
+    {% if player.id_in_group == 1 %}
+
+        You kept {{player.investment1}}<br><br>
+
+        {% for network in p1networks %}
+
+            {% if network == 1 %}
+
+                You sent Player 1 {{player.investment1}} <br>
+
+                They promised {{promise1}}% back <br>
+
+                They gave back {{player1_return1}}% of your investment after growth <br>
+
+                Which is {{player1_returnpts1}} <br><br>
+
+
+            {% elif network == 2 %}
+
+                You sent Player 2 {{player.investment2}} <br>
+
+                They promised {{promise2}}% back <br>
+
+                They gave back {{player2_return1}}% of your investment after growth <br>
+
+                Which is {{player2_returnpts1}} <br><br>
+
+
+            {% elif network == 3 %}
+
+                You sent Player 3 {{player.investment3}} <br>
+
+                They promised {{promise3}}% back <br>
+
+                They gave back {{player3_return1}}% of your investment after growth <br>
+
+                Which is {{player3_returnpts1}} <br><br>
+
+
+            {% elif network == 4 %}
+
+                You sent Player 4 {{player.investment4}} <br>
+
+                They promised {{promise4}}% back <br>
+
+                They gave back {{player4_return1}}% of your investment after growth <br>
+
+                Which is {{player4_returnpts1}} <br><br>
+
+            {% endif %}
+
+        {% endfor %}
+
+    In total you have {{player.final_total_money}} (this includes both money kept from endowment and from outside investment)
+
+    {% elif player.id_in_group == 2 %}
+
+        You kept {{player.investment2}}<br>
+
+        {% for network in p2networks %}
+
+            {% if network == 1 %}
+
+                You sent Player 1 {{player.investment1}} <br>
+
+                They promised {{promise1}}% back <br>
+
+                They gave back {{player1_return2}}% of your investment after growth <br>
+
+                Which is {{player1_returnpts2}} <br><br>
+
+
+            {% elif network == 2 %}
+
+                You sent Player 2 {{player.investment2}} <br>
+
+                They promised {{promise2}}% back <br>
+
+                They gave back {{player2_return2}}% of your investment after growth <br>
+
+                Which is {{player2_returnpts2}} <br><br>
+
+
+            {% elif network == 3 %}
+
+                You sent Player 3 {{player.investment3}} <br>
+
+                They promised {{promise3}}% back <br>
+
+                They gave back {{player3_return2}}% of your investment after growth <br>
+
+                Which is {{player3_returnpts2}} <br><br>
+
+
+            {% elif network == 4 %}
+
+                You sent Player 4 {{player.investment4}} <br>
+
+                They promised {{promise4}}% back <br>
+
+                They gave back {{player4_return2}}% of your investment after growth <br>
+
+                Which is {{player4_returnpts2}} <br><br>
+
+            {% endif %}
+
+        {% endfor %}
+
+    In total you have {{player.final_total_money}} (this includes both money kept from endowment and from outside investment)
+
+    {% elif player.id_in_group == 3 %}
+
+        You kept {{player.investment3}}<br>
+
+        {% for network in p3networks %}
+
+            {% if network == 1 %}
+
+                You sent Player 1 {{player.investment1}} <br>
+
+                They promised {{promise1}}% back <br>
+
+                They gave back {{player1_return3}}% of your investment after growth <br>
+
+                Which is {{player1_returnpts3}} <br><br>
+
+
+            {% elif network == 2 %}
+
+                You sent Player 2 {{player.investment2}} <br>
+
+                They promised {{promise2}}% back <br>
+
+                They gave back {{player2_return3}}% of your investment after growth <br>
+
+                Which is {{player2_returnpts3}} <br><br>
+
+            {% elif network == 3 %}
+
+                You sent Player 3 {{player.investment3}} <br>
+
+                They promised {{promise3}}% back <br>
+
+                They gave back {{player3_return3}}% of your investment after growth <br>
+
+                Which is {{player3_returnpts3}} <br><br>
+
+
+            {% elif network == 4 %}
+
+                You sent Player 4 {{player.investment4}} <br>
+
+                They promised {{promise4}}% back <br>
+
+                They gave back {{player4_return3}}% of your investment after growth <br>
+
+                Which is {{player4_returnpts3}} <br><br>
+
+            {% endif %}
+
+        {% endfor %}
+
+        In total you have {{player.final_total_money}} (this includes both money kept from endowment and from outside investment)
+
+    {% elif player.id_in_group == 4 %}
+
+        You kept {{player.investment4}}<br>
+
+        {% for network in p4networks %}
+
+            {% if network == 1 %}
+
+                You sent Player 1 {{player.investment1}} <br>
+
+                They promised {{promise1}}% back <br>
+
+                They gave back {{player1_return4}}% of your investment after growth <br>
+
+                Which is {{player1_returnpts4}} <br><br>
+
+
+            {% elif network == 2 %}
+
+                You sent Player 2 {{player.investment2}} <br>
+
+                They promised {{promise2}}% back <br>
+
+                They gave back {{player2_return4}}% of your investment after growth <br>
+
+                Which is {{player2_returnpts4}} <br><br>
+
+
+            {% elif network == 3 %}
+
+                You sent Player 3 {{player.investment3}} <br>
+
+                They promised {{promise3}}% back <br>
+
+                They gave back {{player3_return4}}% of your investment after growth <br>
+
+                Which is {{player3_returnpts4}} <br><br>
+
+
+            {% elif network == 4 %}
+
+                You sent Player 4 {{player.investment4}} <br>
+
+                They promised {{promise4}}% back <br>
+
+                They gave back {{player4_return4}}% of your investment after growth <br>
+
+                Which is {{player4_returnpts4}} <br><br>
+
+            {% endif %}
+
+        {% endfor %}
+
+        In total you have {{player.final_total_money}} (this includes both money kept from endowment and from outside investment)
+
+    {% else %}
+        you should not see this
+    {% endif %}
+
+    {% next_button %}
+{% endblock %}

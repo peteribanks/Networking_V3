@@ -1,0 +1,60 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Printing Results
+{% endblock %}
+
+{% block content %}
+
+    {% if player.id_in_group == 1 %}
+        Player 2 invested {{player2_investment1}}<br>
+
+        Player 3 invested {{player3_investment1}}<br>
+
+        How much do you want to return? <br>
+
+        {% formfield player.return2 %} <br>
+
+        {% formfield player.return3 %} <br>
+
+        {% formfield player.return1 %}
+
+
+
+    {% elif player.id_in_group == 2 %}
+        Player 1 invested {{player1_investment2}} <br>
+
+        Player 3 invested {{player3_investment2}}<br>
+
+        How much do you want to return? <br>
+
+        {% formfield player.return1 %} <br>
+
+        {% formfield player.return3 %} <br>
+
+        {% formfield player.return2 %}
+
+    {% elif player.id_in_group == 3 %}
+        Player 1 invested {{player1_investment3}} <br>
+
+        Player 2 invested {{player2_investment3}}<br>
+
+        How much do you want to return? <br>
+
+        {% formfield player.return1 %} <br>
+
+        {% formfield player.return2 %} <br>
+
+        {% formfield player.return3 %}
+
+
+
+    {% else %}
+        you should never see this
+    {% endif %}
+
+    {% next_button %}
+{% endblock %}
+
+

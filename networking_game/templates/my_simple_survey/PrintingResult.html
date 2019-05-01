@@ -1,0 +1,76 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Printing Results
+{% endblock %}
+
+{% block content %}
+
+    {% if player.id_in_group == 1 %}
+        Player 2 Promised {{promise2}} percent back <br>
+        you have {{player.endowment}} <br>
+        Player 2 has a return of {{player2cp}} <br>
+        How much do you want to invest? <br><br>
+
+        {% formfield player.investment2 %}
+
+        Player 3 Promised {{promise3}} percent back <br>
+        you have {{player.endowment}} <br>
+        Player 3 has a return of {{player3cp}} <br>
+        How much do you want to invest? <br>
+
+        {% formfield player.investment3 %}<br>
+
+        Invest in your self
+
+        {% formfield player.investment1 %}
+
+    {% elif player.id_in_group == 2 %}
+        Player 1 Promised {{promise1}} percent back <br>
+        you have {{player.endowment}} <br>
+        Player 1 has a return of {{player1cp}} <br>
+        How much do you want to invest? <br><br>
+
+        {% formfield player.investment1 %}
+
+        Player 3 Promised {{promise3}} percent back <br>
+        you have {{player.endowment}} <br>
+        Player 3 has a return of {{player3cp}} <br>
+        How much do you want to invest? <br>
+
+
+        {% formfield player.investment3 %}
+
+        Invest in your self
+
+        {% formfield player.investment2 %}
+
+    {% elif player.id_in_group == 3 %}
+        Player 1 Promised {{promise1}} percent back <br>
+        you have {{player.endowment}} <br>
+        Player 1 has a return of {{player1cp}} <br>
+        How much do you want to invest? <br><br>
+
+        {% formfield player.investment1 %}
+
+        Player 2 Promised {{promise2}} percent back <br>
+        you have {{player.endowment}} <br>
+        Player 2 has a return of {{player2cp}} <br>
+        How much do you want to invest? <br>
+
+        {% formfield player.investment2 %}
+
+        Invest in your self
+
+        {% formfield player.investment3 %}
+
+
+    {% else %}
+        you should never see this
+    {% endif %}
+
+    {% next_button %}
+{% endblock %}
+
+
